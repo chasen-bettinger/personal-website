@@ -1,7 +1,7 @@
-const data = require('./src/data/data');
-require('dotenv').config({
+const data = require("./src/data/data")
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 module.exports = {
   siteMetadata: {
     title: data.SiteTitle,
@@ -68,20 +68,12 @@ module.exports = {
         icon: `src/assets/img/portfolio-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-github-api`,
-      options: {
-        token: process.env.GATSBY_GITHUB_API_TOKEN,
-        graphQLQuery: data.githubApiQuery,
-        variables: data.githubApiVariables,
-      },
-    },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-          trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
-          head: true,
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
+        head: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

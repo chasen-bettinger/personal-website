@@ -25,13 +25,7 @@ const Footer = () => {
 						</div>
 					</FooterBody>
 					<div className="box">
-						<SubRight> Good design doesn't date. Bad design does. </SubRight>
-						<CopyRight className="text-dark">
-							© 
-							<span> {new Date().getFullYear()}, Built with {` `} 
-								<a href="https://www.gatsbyjs.org">Gatsby</a>{" "}
-          		</span> 
-							Copyright 2020 by {data.SiteAuthor} </CopyRight>
+						{/* <SubRight> Good design doesn't date. Bad design does. </SubRight> */}
 					</div>
 				</ContainerLayout>
 			</FooterStyle>

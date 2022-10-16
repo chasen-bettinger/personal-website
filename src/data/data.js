@@ -1,10 +1,7 @@
 module.exports = {
-  SiteTitle: "Chasen",
-  Sitelogo: "#",
-  SiteLogoText: "Chasen",
+  SiteTitle: "Chasen Bettinger",
   SiteAuthor: "Chasen Bettinger",
   SiteDescription: "Software Developer, DevOps",
-  defaultDescription: "Software engineer!",
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
@@ -46,15 +43,8 @@ module.exports = {
     github: "https://github.com/AbdaliDahir",
     linkedin: "https://www.linkedin.com/in/abdelali-dahir-0b5344111/",
   },
-  SiteAddress: {
-    city: "Casablanca",
-    region: "CurvaSud",
-    country: "Morocco",
-    zipCode: "ZipCode",
-  },
   SiteContact: {
-    email: "abdali.dahir@gmail.com",
+    email: "bettingerchasen@gmail.com",
     phone: "phone number",
   },
-  SiteCopyright: "2020",
 }

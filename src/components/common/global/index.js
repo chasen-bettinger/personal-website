@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import variables from "../../../data/variables";
-import './fonts.css';
+import { createGlobalStyle } from "styled-components"
+import variables from "../../../data/variables"
+import "./fonts.css"
 
 export const GlobalStyle = createGlobalStyle`
   // normalize
@@ -34,6 +34,8 @@ export const GlobalStyle = createGlobalStyle`
     a {
       background-color: transparent;
       text-decoration: none;
+      cursor: pointer;
+
     }
     b,
     strong {
@@ -120,6 +122,36 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+.inline-link {
+  padding-bottom: .25em;
+
+  transition: all .2s ease-out;
+  will-change: transform, color;
+  &:after {
+    z-index: 1;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: ${variables.primary};
+    transform: scale(0, 1);
+    transform-origin: 100% 50%;
+    will-change: transform;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), 
+    -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &:hover:after,
+  &.active:after {
+    background-color: ${variables.primary};
+    transform: scale(1);
+    transform-origin: 0 50%;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s ease-out, 
+    -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
   
 .lined-link {
   display: inline-block;

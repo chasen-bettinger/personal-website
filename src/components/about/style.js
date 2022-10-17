@@ -17,6 +17,7 @@ export const Avatar = styled(Img)`
   width: 100%;
 `
 export const Title = styled.h1`
+  margin: 0;
   font-size: 3rem;
   text-transform: capitalize;
   font-family: "GT-Walsheim-Pro-Bold";

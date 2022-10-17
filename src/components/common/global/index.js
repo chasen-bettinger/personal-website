@@ -108,9 +108,6 @@ export const GlobalStyle = createGlobalStyle`
     .text-dark {
       color: ${variables.black};
     }
-    .text-primary {
-      color: ${variables.primary};
-    }
     .align-middle {
       vertical-align: middle;
     }
@@ -119,6 +116,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 1.125rem;
       font-weight: 200;
       line-height: 1.8;
+      margin: 0;
     }
   }
 
@@ -189,4 +187,119 @@ export const GlobalStyle = createGlobalStyle`
 .error__emoji {
   width: 30vw;
 }
+
+.primary-50 {
+  color: #F0F9FF
+}
+.primary-100 {
+  color: #E0F2FE
+}
+.primary-200 {
+  color: #BAE6FD
+}
+.primary-300 {
+  color: #7DD3FC
+}
+.primary-400 {
+  color: #38BDF8
+}
+.primary-500 {
+  color: #0EA5E9
+}
+.primary-600 {
+  color: #0284C7
+}
+.primary-700 {
+  color: #0369A1
+}
+.primary-800 {
+  color: #075985
+}
+.primary-900 {
+  color: #0C4A6E
+}
+
+.accent-50 {
+  color: #FFF7ED
+}
+.accent-100 {
+  color: #FFEDD5
+}
+.accent-200 {
+  color: #FED7AA
+}
+.accent-300 {
+  color: #FDBA74
+}
+.accent-400 {
+  color: #FB923C
+}
+.accent-500 {
+  color: #F97316
+}
+.accent-600 {
+  color: #EA580C
+}
+.accent-700 {
+  color: #C2410C
+}
+.accent-800 {
+  color: #9A3412
+}
+.accent-900 {
+  color: #7C2D12
+}
+
+.neutral-50 {
+  color: #FAFAFA
+}
+.neutral-100 {
+  color: #F4F4F5
+}
+.neutral-200 {
+  color: #E4E4E7
+}
+.neutral-300 {
+  color: #D4D4D8
+}
+.neutral-400 {
+  color: #A1A1AA
+}
+.neutral-500 {
+  color: #71717A
+}
+.neutral-600 {
+  color: #52525B
+}
+.neutral-700 {
+  color: #3F3F46
+}
+.neutral-800 {
+  color: #27272A
+}
+.neutral-900 {
+  color: #18181B
+}
+
+.position-relative {
+  position: relative;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-1.5 {
+  margin-bottom: 0.375rem;
+}
+
+.mb-2	{
+  margin-bottom: 0.5rem;
+}
+.mb-4	{
+  margin-bottom: 1rem;
+}
+.mb-8	{
+  margin-bottom: 2rem;
+}
+
 `

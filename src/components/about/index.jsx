@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import {AboutSection, Avatar, Title, Text, SubTitle} from './style';
-import {SectionIntro, ContainerLayout, ResumeButton} from "../common";
+import { AboutSection, Avatar, Title, Text } from "./style"
+import { SectionIntro, ContainerLayout } from "../common"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -21,14 +21,36 @@ const About = () => {
         <ContainerLayout>
           <AboutSection>
             <div>
-              <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
-            </div> 
+              <Avatar
+                fluid={data.placeholderImage.childImageSharp.fluid}
+                alt="user photo"
+              />
+            </div>
             <div>
-              <Title>Hello, I’m Chasen!</Title>
-              <Text>Is there really anything more satisfying in life than building products and tools that people love to use?</Text>
-              <Text>Sounds crazy, right? I'm serious!</Text>
-              <Text>During my time at University, I drove 10 hours through the night to attend a hackathon at Princeton University. I ended up building an <a className={'text-primary inline-link'}>Alexa Voice App</a> that allowed you to track your goals. Ever since, I've been hooked on building software that makes us more efficient, safer, and happier. </Text>
-              <Text>When I'm not tinkering on something, you can find me cheering on the Montreal Canadiens, watching an F1 race, or going to the gym.</Text>
+              <Title className="mb-4">Hello, I’m Chasen!</Title>
+              <Text className="mb-8">
+                I am a former software developer turned product owner that loves
+                to creatively solve problems. I value using the right tool for
+                the job, identifying the root cause of why a problem might
+                exist, and using to data and metrics to measure success. I
+                believe in being customer obssessed, getting feedback quickly,
+                and communicating early often with my teammates.
+              </Text>
+              <Text className="mb-8">
+                I once made the decision to drive 10 hours through the night to
+                attend a hackathon at Princeton University. At the event, I
+                built an{" "}
+                <a className={"primary-500 inline-link position-relative"}>
+                  Alexa Voice App
+                </a>{" "}
+                that enabled a user to track their goals. Ever since, I've been
+                hooked on building software as a means to solve for challenges
+                we all face every day.
+              </Text>
+              <Text>
+                When I'm not tinkering on something, you can find me cheering on
+                the Montreal Canadiens, reading a book, or going to the gym.
+              </Text>
             </div>
           </AboutSection>
         </ContainerLayout>
@@ -36,6 +58,5 @@ const About = () => {
     </>
   )
 }
-
 
 export default About

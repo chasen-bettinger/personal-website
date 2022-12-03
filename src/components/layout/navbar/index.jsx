@@ -39,12 +39,12 @@ const Navbar = ({ siteTitle }) => (
                 <Briefcase /> <span> Portfolio </span>{" "}
               </Link>
             </li> */}
-            <li>
+            {/* <li>
               <Link to="/blog" className="lined-link" activeClassName="active">
                 {" "}
                 <Feather /> <span> Blog </span>{" "}
               </Link>
-            </li>
+            </li> */}
           </NavbarList>
         </div>
       </NavbarElement>

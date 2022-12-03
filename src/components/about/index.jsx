@@ -34,7 +34,7 @@ const About = () => {
                 the job, identifying the root cause of why a problem might
                 exist, and using to data and metrics to measure success. I
                 believe in being customer obssessed, getting feedback quickly,
-                and communicating early often with my teammates.
+                and communicating early and often with my teammates.
               </Text>
               <Text className="mb-8">
                 I once made the decision to drive 10 hours through the night to

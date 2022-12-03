@@ -7,39 +7,12 @@ exports.createPages = async ({ graphql, actions }) => {
   const blogPost = path.resolve(`./src/templates/blogs/post.js`)
   const categoriesTemplate = path.resolve("src/templates/blogs/categories.js")
   const portfolioWork = path.resolve(`./src/templates/works/work.js`)
-  const blogResult = await graphql(
-    `
-      {
-        blogGroup: allMarkdownRemark(
-          filter: {fileAbsolutePath: {regex: "/(blog)/"}}
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                categories
-              }
-            }
-          }
-        }
-        categoriesGroup: allMarkdownRemark(limit: 2000) {
-          group(field: frontmatter___categories) {
-            fieldValue
-          }
-        }
-      }
-    `
-  )
+  const blogResult = {}
   const worksResult = await graphql(
     `
       {
         allMarkdownRemark(
-          filter: {fileAbsolutePath: {regex: "/(works)/"}}
+          filter: { fileAbsolutePath: { regex: "/(works)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -58,14 +31,14 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   )
 
-  if (blogResult.errors || worksResult.errors) {
+  if (blogResult?.errors || worksResult.errors) {
     throw blogResult.errors
   }
 
   // Create blog posts pages.
-  const posts = blogResult.data.blogGroup.edges
+  const posts = blogResult?.data?.blogGroup?.edges
   const works = worksResult.data.allMarkdownRemark.edges
-  
+
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
@@ -91,14 +64,14 @@ exports.createPages = async ({ graphql, actions }) => {
           category: category.fieldValue,
         },
       })
+    })
   })
-  })
-  works.forEach((work) => {
+  works.forEach(work => {
     createPage({
       path: work.node.fields.slug,
       component: portfolioWork,
       context: {
-        slug: work.node.fields.slug
+        slug: work.node.fields.slug,
       },
     })
   })

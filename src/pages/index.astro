@@ -1,0 +1,51 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1>Hello, I’m Chasen! 👋</h1>
+      <p>
+        I am a cloud-native software developer turned security engineer that
+        loves to build products. I value using the right tool for the job,
+        identifying the root cause of why a problem might exist, and using to
+        data and metrics to measure success. I believe in being customer
+        obssessed, getting feedback quickly, and communicating early and often
+        with my teammates.
+      </p>
+      <p>
+        I once made the decision to drive 10 hours through the night to attend a
+        hackathon at Princeton University. At the event, I built an{" "}
+        <a
+          href="https://github.com/chasen-bettinger/Rise-Goal-Tracking-Alexa-App"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Alexa Voice App
+        </a>{" "}
+        that enabled a user to track their goals. Ever since, I've been hooked on
+        building software as a means to solve for challenges we all face every day.
+      </p>
+      <p>
+        I currently work at <a
+          href="https://jupiterone.com/"
+          rel="noreferrer"
+          target="_blank">JupiterOne</a
+        > in a role that enables me to create security products in new markets. If
+        you're interested in working together, don't hesitate to reach out!
+      </p>
+      <p>
+        When I'm not tinkering on something, you can find me cheering on the
+        Montreal Canadiens, reading a book, or going to the gym.
+      </p>
+    </main>
+  </body>
+</html>

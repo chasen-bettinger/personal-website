@@ -2,6 +2,7 @@
 title: "Why do we love to throw away money?"
 description: "Your own energy is limited, but unlike money, the quantity of it is invisible. You can't see how much you have left, but you can feel it."
 pubDate: "09/16/2023"
+heroImage: "/cat_burning_money.png"
 ---
 
 Comparison is the thief of joy. Easy to interpret, even easier to say aloud. Focusing on another deprives yourself of focusing on yourself. Why does this matter and why is it the default instinct of us to look outwards instead of inside?
